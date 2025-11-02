@@ -1,25 +1,168 @@
-Australiens Bergbau-Geschichte
-└─ Gold (1850er–1890er)
-   ├─ Victoria & NSW
-   │   ├─ Wirtschaftsboom + Migration
-   │   └─ Städtewachstum (Melbourne, Ballarat)
-   └─ Silber/Blei/Zink (Broken Hill)
-       ├─ BHP-Gründung 1885
-       └─ Industrie & Münzen
-       └─ Kupfer (South Australia)
-           ├─ Industrielle Revolution
-           └─ „Copper Kingdom“
-           └─ Eisenerz (Pilbara, WA)
-               ├─ Export Japan → China
-               └─ Top-Export (~60 % Einnahmen)
-               └─ Nickel (Kambalda)
-                   └─ Stahl + Poseidon-Boom
-                   └─ Bauxit (QLD/NT)
-                       └─ Aluminium (~20 % Welt)
-                       └─ Uran (NT/SA)
-                           ├─ Kernenergie
-                           └─ Umweltdebatten
-                           └─ Diamanten (Argyle)
-                               ├─ Rosa Diamanten
-                               └─ Luxus-Schmuck
-                               └─ ? Dutch Disease?
+svg_content = """<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
+    .title { font: bold 28px sans-serif; fill:#1b2838; }
+    .trunk { stroke:#6b4f2b; stroke-width:18; stroke-linecap:round; }
+    .branch { stroke:#8a6a44; stroke-width:6; stroke-linecap:round; }
+    .node { fill:#f7f9fb; stroke:#2b5b7a; stroke-width:2; rx:10; ry:10; }
+    .node-title { font: bold 14px sans-serif; fill:#143c53; }
+    .node-body { font: 12px sans-serif; fill:#143c53; }
+    .small { font: 11px sans-serif; fill:#143c53; }
+    .connector { stroke:#7a9fb8; stroke-width:2; stroke-linecap:round; }
+  </style>
+
+  <!-- Title -->
+  <text x="50" y="50" class="title">Australia — Mining timeline & importance</text>
+
+  <!-- Trunk -->
+  <line x1="200" y1="120" x2="200" y2="300" class="trunk" />
+
+  <!-- Main trunk end / root node -->
+  <g transform="translate(120,300)">
+    <rect class="node" x="0" y="0" width="160" height="60" />
+    <text x="10" y="22" class="node-title">Core</text>
+    <text x="10" y="40" class="node-body">Iron ore, coal, gold, base metals, critical minerals</text>
+  </g>
+
+  <!-- Branch layout (left & right) -->
+  <!-- Left column branches -->
+  <!-- Gold -->
+  <line x1="200" y1="360" x2="60" y2="460" class="branch" />
+  <g transform="translate(20,460)">
+    <rect class="node" x="0" y="0" width="240" height="100" />
+    <text x="10" y="22" class="node-title">Gold</text>
+    <text x="10" y="40" class="node-body">When: 1850s–1890s (gold rushes); continuous</text>
+    <text x="10" y="58" class="node-body">Why: Wealth, settlement, currency, investment</text>
+    <text x="10" y="76" class="small">Still mined: Yes — major producer</text>
+  </g>
+
+  <!-- Silver/Lead/Zinc (Broken Hill) -->
+  <line x1="200" y1="420" x2="60" y2="620" class="branch" />
+  <g transform="translate(20,620)">
+    <rect class="node" x="0" y="0" width="260" height="100" />
+    <text x="10" y="22" class="node-title">Silver / Lead / Zinc</text>
+    <text x="10" y="40" class="node-body">When: Late 19th c. (Broken Hill 1880s) → ongoing</text>
+    <text x="10" y="58" class="node-body">Why: Industrial metals, alloys, galvanising</text>
+    <text x="10" y="76" class="small">Still mined: Yes; important base metals</text>
+  </g>
+
+  <!-- Copper -->
+  <line x1="200" y1="520" x2="60" y2="780" class="branch" />
+  <g transform="translate(20,780)">
+    <rect class="node" x="0" y="0" width="260" height="110" />
+    <text x="10" y="22" class="node-title">Copper</text>
+    <text x="10" y="40" class="node-body">When: Late 19th–20th c., modern expansions</text>
+    <text x="10" y="58" class="node-body">Why: Electrical & industrial metal</text>
+    <text x="10" y="76" class="node-body">Still mined: Yes (e.g., Olympic Dam)</text>
+    <text x="10" y="94" class="small">Importance: Key export & industrial input</text>
+  </g>
+
+  <!-- Nickel -->
+  <line x1="200" y1="660" x2="60" y2="980" class="branch" />
+  <g transform="translate(20,980)">
+    <rect class="node" x="0" y="0" width="260" height="110" />
+    <text x="10" y="22" class="node-title">Nickel</text>
+    <text x="10" y="40" class="node-body">When: Mid‑20th c. (Kambalda), booms & busts</text>
+    <text x="10" y="58" class="node-body">Why: Stainless steel, alloys; now batteries</text>
+    <text x="10" y="76" class="small">Still mined: Yes — growing battery role</text>
+    <text x="10" y="94" class="small">Importance: Increasing strategic value</text>
+  </g>
+
+  <!-- Right column branches -->
+  <!-- Iron ore -->
+  <line x1="320" y1="360" x2="560" y2="460" class="branch" />
+  <g transform="translate(560,420)">
+    <rect class="node" x="0" y="0" width="320" height="120" />
+    <text x="10" y="26" class="node-title">Iron ore</text>
+    <text x="10" y="46" class="node-body">When: Big expansion mid‑20th c.; Pilbara boom 1960s→</text>
+    <text x="10" y="66" class="node-body">Why: Feedstock for steel production (China, Japan)</text>
+    <text x="10" y="86" class="small">Still mined: Yes — Australia's largest bulk export</text>
+    <text x="10" y="106" class="small">Importance: Extremely important to exports & revenues</text>
+  </g>
+
+  <!-- Coal -->
+  <line x1="320" y1="460" x2="560" y2="620" class="branch" />
+  <g transform="translate(560,580)">
+    <rect class="node" x="0" y="0" width="320" height="120" />
+    <text x="10" y="26" class="node-title">Coal (thermal & metallurgical)</text>
+    <text x="10" y="46" class="node-body">When: Mined since 19th c.; major 20th c. growth</text>
+    <text x="10" y="66" class="node-body">Why: Energy & steelmaking</text>
+    <text x="10" y="86" class="small">Still mined: Yes — large export industry</text>
+    <text x="10" y="106" class="small">Importance: Major export earner; policy pressures exist</text>
+  </g>
+
+  <!-- Bauxite -->
+  <line x1="320" y1="560" x2="560" y2="780" class="branch" />
+  <g transform="translate(560,740)">
+    <rect class="node" x="0" y="0" width="300" height="100" />
+    <text x="10" y="26" class="node-title">Bauxite → Aluminium</text>
+    <text x="10" y="46" class="node-body">When: 20th c. expansion (post‑WWII)</text>
+    <text x="10" y="64" class="node-body">Why: Feedstock for aluminium smelting</text>
+    <text x="10" y="82" class="small">Still mined: Yes (Weipa, Gove)</text>
+  </g>
+
+  <!-- Lithium -->
+  <line x1="320" y1="700" x2="560" y2="940" class="branch" />
+  <g transform="translate(560,900)">
+    <rect class="node" x="0" y="0" width="320" height="110" />
+    <text x="10" y="26" class="node-title">Lithium</text>
+    <text x="10" y="46" class="node-body">When: 2010s–2020s boom (EV/battery demand)</text>
+    <text x="10" y="64" class="node-body">Why: Lithium‑ion batteries for EVs & storage</text>
+    <text x="10" y="82" class="small">Still mined: Yes — major growth area (WA)</text>
+    <text x="10" y="100" class="small">Importance: High & growing — strategic for batteries</text>
+  </g>
+
+  <!-- Rare earths -->
+  <line x1="320" y1="840" x2="560" y2="1180" class="branch" />
+  <g transform="translate(560,1140)">
+    <rect class="node" x="0" y="0" width="320" height="110" />
+    <text x="10" y="26" class="node-title">Rare earth elements (REEs)</text>
+    <text x="10" y="46" class="node-body">When: Late 20th–21st c.; renewed focus since 2010s</text>
+    <text x="10" y="64" class="node-body">Why: Magnets, electronics, green tech, defence</text>
+    <text x="10" y="82" class="small">Still mined: Select projects — strategic priority</text>
+  </g>
+
+  <!-- Uranium (lower right) -->
+  <line x1="200" y1="840" x2="320" y2="1060" class="branch" />
+  <g transform="translate(320,1020)">
+    <rect class="node" x="0" y="0" width="260" height="110" />
+    <text x="10" y="22" class="node-title">Uranium</text>
+    <text x="10" y="40" class="node-body">When: Mid‑20th c. discoveries; commercial from 1970s</text>
+    <text x="10" y="58" class="node-body">Why: Exported for nuclear fuel (Australia no domestic reactors)</text>
+    <text x="10" y="76" class="small">Still mined: Partially; market & social checks apply</text>
+  </g>
+
+  <!-- Diamonds (lower left) -->
+  <line x1="200" y1="920" x2="60" y2="1240" class="branch" />
+  <g transform="translate(20,1240)">
+    <rect class="node" x="0" y="0" width="260" height="80" />
+    <text x="10" y="22" class="node-title">Diamonds (Argyle)</text>
+    <text x="10" y="40" class="node-body">When: Argyle opened 1980s; pink diamonds famous</text>
+    <text x="10" y="58" class="small">Still mined: Argyle closed 2020; national industry reduced</text>
+  </g>
+
+  <!-- Other / industrial minerals (bottom center) -->
+  <g transform="translate(320,1280)">
+    <rect class="node" x="0" y="0" width="640" height="120" />
+    <text x="10" y="26" class="node-title">Other industrial minerals</text>
+    <text x="10" y="46" class="node-body">Tin, tungsten, phosphate, potash, specialty minerals</text>
+    <text x="10" y="66" class="node-body">When: Various (19th–21st c.)</text>
+    <text x="10" y="86" class="small">Importance: Smaller nationally but regionally essential</text>
+  </g>
+
+  <!-- Footer notes area -->
+  <g transform="translate(20,1420)">
+    <text x="0" y="0" class="small">Notes: Time trends — 1850s–1890s gold rushes; late 19th c. base metals; 20th c. boom in iron ore, coal, bauxite; 21st c. rise of battery & critical minerals. En[...]
+  </g>
+
+</svg>
+"""
+
+def main():
+    out_file = "Meik.svg"
+    with open(out_file, "w", encoding="utf-8") as f:
+        f.write(svg_content)
+    print(f"Wrote SVG to {out_file}")
+
+if __name__ == "__main__":
+    main()
